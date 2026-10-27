@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "236361827489",
+    "project_id": "fastbitefb",
+    "storage_bucket": "fastbitefb.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:236361827489:android:c25b6c13464e48615c9ce0",
+        "android_client_info": {
+          "package_name": "com.example.fastbite"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBX08prCEU3r8VJHefjsWmq1LTrVk0vyg4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

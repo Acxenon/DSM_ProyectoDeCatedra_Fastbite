@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="naranja_principal">#FF6B00</color>
+    <color name="naranja_oscuro">#A04100</color>
+    <color name="marron_texto">#1C1B1B</color>
+    <color name="marron_suave">#5A4136</color>
+    <color name="fondo_principal">#FCF9F8</color>
+    <color name="tarjetas">#F6F3F2</color>
+    <color name="blanco">#FFFFFF</color>
+    <color name="fb_orange">#FF6B00</color>
+    <color name="fb_ink">#231D1A</color>
+    <color name="fb_muted">#74675F</color>
+    <color name="fb_cream">#FCF9F7</color>
+    <color name="fb_pale">#FFEFDC</color>
+    <color name="fb_white">#FFFFFF</color>
+    <color name="fb_orange_dark">#A04100</color>
+</resources>

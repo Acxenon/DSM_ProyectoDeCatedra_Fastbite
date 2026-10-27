@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:padding="8dp" android:background="@color/fb_white">
+    <TextView android:id="@+id/nav_home" style="@style/FbNav" android:layout_width="0dp" android:layout_height="wrap_content" android:text="⌂ Inicio" android:layout_weight="1"/>
+    <TextView android:id="@+id/nav_search" style="@style/FbNav" android:layout_width="0dp" android:layout_height="wrap_content" android:text="⌕ Buscar" android:layout_weight="1"/>
+    <TextView android:id="@+id/nav_orders" style="@style/FbNav" android:layout_width="0dp" android:layout_height="wrap_content" android:text="▤ Pedidos" android:layout_weight="1"/>
+    <TextView android:id="@+id/nav_profile" style="@style/FbNav" android:layout_width="0dp" android:layout_height="wrap_content" android:text="♙ Perfil" android:layout_weight="1"/>
+</LinearLayout>

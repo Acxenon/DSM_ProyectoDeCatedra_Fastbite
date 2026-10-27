@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools" style="@style/FbCard" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical">
+    <ImageView android:id="@+id/food_photo" android:layout_width="match_parent" android:layout_height="180dp" android:src="@drawable/banner_hamburguesa" android:scaleType="centerCrop" android:contentDescription="Foto de la comida" android:visibility="visible" tools:visibility="visible" android:clipToOutline="true" android:background="@drawable/bg_fb_photo"/>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginTop="8dp">
+        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:orientation="vertical" android:layout_weight="1" android:layout_marginStart="0dp">
+            <TextView android:id="@+id/food_name" style="@style/FbSection" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Hamburguesa clásica" android:layout_marginTop="0dp" android:textSize="18sp"/>
+            <TextView android:id="@+id/food_description" style="@style/FbCaption" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Carne, queso cheddar, lechuga y salsa de la casa." android:textSize="13sp" android:maxLines="3"/>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical">
+        <TextView android:id="@+id/food_price" style="@style/FbPrice" android:layout_width="0dp" android:layout_height="wrap_content" android:text="$6.50" android:layout_weight="1"/>
+        <com.google.android.material.button.MaterialButton android:id="@+id/food_favorite" style="@style/FbIconSecondaryButton" android:layout_width="48dp" android:layout_height="48dp" android:text="♡" android:contentDescription="Marcar favorito" android:layout_marginStart="8dp"/>
+        <com.google.android.material.button.MaterialButton android:id="@+id/food_add" style="@style/FbIconPrimaryButton" android:layout_width="48dp" android:layout_height="48dp" android:text="+" android:contentDescription="Agregar comida" android:layout_marginStart="8dp"/>
+    </LinearLayout>
+</LinearLayout>

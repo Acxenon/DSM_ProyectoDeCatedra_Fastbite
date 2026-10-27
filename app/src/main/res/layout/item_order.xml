@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" style="@style/FbCard" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical">
+    <TextView android:id="@+id/order_number" style="@style/FbSection" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Pedido #12345678" android:layout_marginTop="0dp"/>
+    <TextView android:id="@+id/order_status" style="@style/FbPrice" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Pendiente"/>
+    <TextView android:id="@+id/order_date" style="@style/FbCaption" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="13/10/2026 · 17:00"/>
+    <TextView android:id="@+id/order_items" style="@style/FbText" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="2 × Hamburguesa clásica" android:layout_marginTop="16dp"/>
+    <TextView android:id="@+id/order_sync" style="@style/FbCaption" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="✓ Sincronizado"/>
+    <TextView android:id="@+id/order_total" style="@style/FbPrice" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Total $17.50" android:layout_marginTop="16dp"/>
+    <com.google.android.material.button.MaterialButton android:id="@+id/order_details" style="@style/FbSecondaryButton" android:layout_width="match_parent" android:layout_height="52dp" android:text="Ver detalles"/>
+    <com.google.android.material.button.MaterialButton android:id="@+id/order_repeat" style="@style/FbSecondaryButton" android:layout_width="match_parent" android:layout_height="52dp" android:text="Repetir pedido"/>
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/order_delivered"
+        style="@style/FbPrimaryButton"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:text="@string/order_mark_delivered" />
+    <com.google.android.material.button.MaterialButton android:id="@+id/order_cancel" style="@style/FbSecondaryButton" android:layout_width="match_parent" android:layout_height="52dp" android:text="Cancelar pedido"/>
+</LinearLayout>

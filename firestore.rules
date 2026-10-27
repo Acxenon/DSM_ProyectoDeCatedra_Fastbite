@@ -1,0 +1,45 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    function owner(uid) {
+      return request.auth != null && request.auth.uid == uid;
+    }
+    function validOrder(uid, id) {
+      let d = request.resource.data;
+      return d.keys().hasAll(['id', 'ownerId', 'customer', 'lines', 'address', 'phone', 'notes', 'payment', 'subtotal', 'discount', 'delivery', 'total', 'createdAt', 'updatedAt', 'status'])
+        && d.keys().hasOnly(['id', 'ownerId', 'customer', 'lines', 'address', 'phone', 'notes', 'payment', 'subtotal', 'discount', 'delivery', 'total', 'createdAt', 'updatedAt', 'status'])
+        && d.id == id && d.ownerId == uid
+        && d.customer is string && d.customer.size() <= 200
+        && d.lines is list && d.lines.size() > 0 && d.lines.size() <= 100
+        && d.address is string && d.address.size() >= 8 && d.address.size() <= 500
+        && d.phone is string && d.phone.size() >= 8 && d.phone.size() <= 32
+        && d.notes is string && d.notes.size() <= 1000
+        && d.payment == 'CASH'
+        && d.subtotal is int && d.subtotal > 0
+        && d.discount is int && d.discount >= 0 && d.discount <= d.subtotal
+        && d.delivery is int && d.delivery == 250
+        && d.total is int && d.total == d.subtotal - d.discount + d.delivery
+        && d.createdAt is int && d.updatedAt is int
+        && d.status in ['PENDING', 'CONFIRMED', 'CANCELLED', 'DELIVERED'];
+    }
+    match /users/{uid}/orders/{orderId} {
+      allow read: if owner(uid);
+      // Un pedido puede haberse entregado/cancelado antes de la primera sincronización.
+      allow create: if owner(uid) && validOrder(uid, orderId)
+        && request.resource.data.status in ['PENDING', 'CANCELLED', 'DELIVERED'];
+      // El propietario puede confirmar recepción. El resto del pedido permanece inmutable.
+      allow update: if owner(uid) && validOrder(uid, orderId)
+        && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['status', 'updatedAt'])
+        && (
+          request.resource.data.status == resource.data.status
+          || (resource.data.status == 'PENDING' && request.resource.data.status in ['CANCELLED', 'DELIVERED'])
+          || (resource.data.status == 'CONFIRMED' && request.resource.data.status == 'DELIVERED')
+        )
+        && request.resource.data.updatedAt >= resource.data.updatedAt;
+      allow delete: if false;
+    }
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

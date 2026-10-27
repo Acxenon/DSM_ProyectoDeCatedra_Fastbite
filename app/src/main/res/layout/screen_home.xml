@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8'?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent" android:layout_height="match_parent" android:fillViewport="true" android:background="@color/fb_cream">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="18dp">
+        <LinearLayout android:id="@+id/home_delivery" style="@style/FbCard" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:background="@drawable/bg_fb_pale">
+            <TextView android:id="@+id/home_delivery_label" style="@style/FbCaption" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Entregar en" />
+            <TextView android:id="@+id/home_address" style="@style/FbText" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Agrega tu dirección de entrega ›" tools:text="Casa 12, San Salvador" />
+        </LinearLayout>
+        <com.google.android.material.button.MaterialButton android:id="@+id/home_search" style="@style/FbSecondaryButton" android:layout_width="match_parent" android:layout_height="52dp" android:text="⌕ Busca tu comida favorita" />
+        <TextView android:id="@+id/home_greeting" style="@style/FbTitle" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Hola, bienvenido 👋" android:layout_marginTop="16dp" />
+        <TextView android:id="@+id/home_subtitle" style="@style/FbCaption" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Elige algo delicioso para hoy." />
+        <HorizontalScrollView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="14dp" android:scrollbars="none">
+            <LinearLayout android:id="@+id/home_categories" android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="horizontal" />
+        </HorizontalScrollView>
+        <TextView android:id="@+id/home_list_title" style="@style/FbSection" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Populares ahora" />
+        <com.google.android.material.button.MaterialButton android:id="@+id/home_favorites" style="@style/FbSecondaryButton" android:layout_width="match_parent" android:layout_height="52dp" android:text="♥ Favoritos" />
+        <LinearLayout android:id="@+id/home_food_list" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:layout_marginTop="8dp" />
+    </LinearLayout>
+</ScrollView>

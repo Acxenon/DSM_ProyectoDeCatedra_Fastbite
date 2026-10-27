@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" style="@style/FbCard" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:clickable="true" android:focusable="true">
+    <TextView android:id="@+id/option_title" style="@style/FbSection" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="📍 Dirección guardada" android:layout_marginTop="0dp"/>
+    <TextView android:id="@+id/option_description" style="@style/FbCaption" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Agrega dirección y teléfono"/>
+</LinearLayout>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent" android:layout_height="match_parent" android:fillViewport="true" android:background="@color/fb_cream">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="18dp">
+        <TextView android:id="@+id/profile_title" style="@style/FbTitle" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Mi perfil"/>
+        <LinearLayout style="@style/FbCard" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:background="@drawable/bg_fb_pale">
+            <TextView android:id="@+id/profile_display_name" style="@style/FbTitle" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Nombre y apellido" tools:text="Zenon Lovo"/>
+            <TextView android:id="@+id/profile_email" style="@style/FbCaption" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Correo electrónico" tools:text="zl@gmail.com"/>
+            <TextView android:id="@+id/profile_name_label" style="@style/FbCaption" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Nombre y apellido"/>
+            <EditText android:id="@+id/profile_name" style="@style/FbField" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Nombre y apellido" android:inputType="textPersonName|textCapWords" android:maxLength="120"/>
+            <com.google.android.material.button.MaterialButton android:id="@+id/profile_save" style="@style/FbPrimaryButton" android:layout_width="match_parent" android:layout_height="52dp" android:text="@string/profile_update_name"/>
+        </LinearLayout>
+        <LinearLayout android:id="@+id/profile_options" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:layout_marginTop="8dp"/>
+        <com.google.android.material.button.MaterialButton android:id="@+id/profile_logout" style="@style/FbSecondaryButton" android:layout_width="match_parent" android:layout_height="52dp" android:text="Cerrar sesión"/>
+    </LinearLayout>
+</ScrollView>

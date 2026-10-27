@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" style="@style/FbCard" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginTop="10dp">
+        <TextView android:id="@+id/summary_subtotal_label" style="@style/FbText" android:layout_width="0dp" android:layout_height="wrap_content" android:text="Subtotal" android:layout_weight="1"/>
+        <TextView android:id="@+id/summary_subtotal" style="@style/FbText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="$15.00"/>
+    </LinearLayout>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginTop="10dp" android:id="@+id/summary_discount_row">
+        <TextView android:id="@+id/summary_discount_label" style="@style/FbText" android:layout_width="0dp" android:layout_height="wrap_content" android:text="Cupón · 10%" android:layout_weight="1"/>
+        <TextView android:id="@+id/summary_discount" style="@style/FbText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="−$1.50"/>
+    </LinearLayout>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginTop="10dp">
+        <TextView android:id="@+id/summary_delivery_label" style="@style/FbText" android:layout_width="0dp" android:layout_height="wrap_content" android:text="Envío" android:layout_weight="1"/>
+        <TextView android:id="@+id/summary_delivery" style="@style/FbText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="$2.50"/>
+    </LinearLayout>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginTop="10dp">
+        <TextView android:id="@+id/summary_total_label" style="@style/FbText" android:layout_width="0dp" android:layout_height="wrap_content" android:text="Total" android:layout_weight="1"/>
+        <TextView android:id="@+id/summary_total" style="@style/FbPrice" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="$16.00"/>
+    </LinearLayout>
+    <TextView android:id="@+id/summary_note" style="@style/FbCaption" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Precios con impuestos incluidos."/>
+</LinearLayout>

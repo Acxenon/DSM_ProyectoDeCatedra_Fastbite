@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='utf-8'?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent" android:fillViewport="true" android:background="@color/fb_cream">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="18dp">
+        <TextView android:id="@+id/checkout_title" style="@style/FbTitle" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Confirma tu pedido" />
+        <TextView android:id="@+id/checkout_subtitle" style="@style/FbCaption" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Revisa las comidas y los datos de entrega." />
+        <LinearLayout android:id="@+id/checkout_lines" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:layout_marginTop="8dp" />
+        <TextView android:id="@+id/checkout_delivery_title" style="@style/FbSection" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Detalles de entrega" />
+        <EditText android:id="@+id/checkout_address" style="@style/FbField" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Dirección y referencia" android:inputType="textMultiLine" android:minLines="2" android:maxLines="4" android:maxLength="500" />
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginTop="10dp">
+            <TextView android:layout_width="wrap_content" android:layout_height="56dp" android:gravity="center" android:paddingStart="12dp" android:paddingEnd="12dp" android:background="@drawable/bg_fb_pale" android:text="+503" android:textColor="@color/fb_orange_dark" android:textSize="16sp" android:textStyle="bold" android:contentDescription="Prefijo de El Salvador, más quinientos tres" />
+            <EditText android:id="@+id/checkout_phone" style="@style/FbField" android:layout_width="0dp" android:layout_height="56dp" android:hint="Teléfono (8 dígitos)" android:inputType="phone" android:maxLength="8" android:layout_weight="1" android:layout_marginStart="8dp" android:layout_marginTop="0dp" android:digits="0123456789" android:singleLine="true" />
+        </LinearLayout>
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="6dp" android:text="El Salvador · 8 dígitos, sin incluir el prefijo +503" android:textColor="@color/fb_muted" android:textSize="12sp" />
+        <EditText android:id="@+id/checkout_notes" style="@style/FbField" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Notas para el pedido (opcional)" android:inputType="textMultiLine" />
+        <TextView android:id="@+id/checkout_payment_title" style="@style/FbSection" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Método de pago" />
+        <LinearLayout style="@style/FbCard" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical">
+            <TextView android:id="@+id/checkout_payment" style="@style/FbText" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="💵 Efectivo al recibir" />
+            <TextView android:id="@+id/checkout_payment_detail" style="@style/FbCaption" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="No se realizará ningún cargo desde la aplicación." />
+        </LinearLayout>
+        <include android:id="@+id/checkout_summary" layout="@layout/view_summary" />
+        <com.google.android.material.button.MaterialButton android:id="@+id/checkout_confirm" style="@style/FbPrimaryButton" android:layout_width="match_parent" android:layout_height="52dp" android:text="Confirmar pedido" />
+        <TextView android:id="@+id/checkout_notice" style="@style/FbCaption" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="El pedido se guarda en tu cuenta. Su preparación y entrega requieren confirmación del restaurante." />
+    </LinearLayout>
+</ScrollView>
