@@ -96,13 +96,6 @@ La dirección guardada y la confirmación requieren exactamente 8 dígitos numé
 - Se retiraron las tarjetas **Cupones** y **Créditos de fotografías** del perfil. Las atribuciones continúan distribuidas con las imágenes en el proyecto y los assets.
 - **Marcar como entregado** solicita confirmación, persiste el estado, muestra la pestaña Entregados y se sincroniza con Firebase. Solo aparece para pedidos pendientes o confirmados. Un pedido entregado/cancelado conserva ese estado final.
 
-### Publicar las reglas actualizadas (necesario)
-
-En tu proyecto `fastbitefb`, abre **Firestore Database → Reglas**, pega el contenido de `firestore.rules` de esta versión y pulsa **Publicar**. La versión anterior de las reglas bloquea el estado `DELIVERED` escrito por el cliente. No basta con sustituir el archivo en Android Studio.
-
-Hasta publicar estas reglas, la app puede guardar el pedido como entregado localmente, pero indicará que está pendiente de sincronizar. Después de publicar, toca **Actualizar historial** en Pedidos para reintentar.
-
-
 ## Organización del proyecto
 
 El diseño está en XML y los eventos/datos se enlazan desde Kotlin. `activity_main.xml` se vuelve a utilizar como contenedor de la aplicación.
@@ -151,13 +144,6 @@ Todas las rutas Kotlin son relativas a `app/src/main/java/com/example/fastbite/`
 Para editar una pantalla, abre su XML en **Design** o **Split** de Android Studio. Los listados se llenan en ejecución con las tarjetas `item_*.xml`; abre también esos archivos para editar cada elemento de la lista. Cambia precios/comidas en `data/FoodCatalog.kt`.
 
 No se han cambiado la identidad del proyecto Firebase, el UID de las cuentas ni las claves de persistencia: se conservan datos y funciones de la versión anterior. Para usar esta versión, descomprime en una carpeta nueva y abre esa carpeta; no superpongas carpetas sobre la anterior, porque podrían quedar clases de los paquetes antiguos.
-
-## Verificación de esta actualización
-
-- 30 pruebas unitarias de importes, búsqueda, serialización, traducción de errores y transiciones de estado: superadas.
-- 17 comprobaciones de las reglas contra el emulador local de Firestore: superadas (entrega, cancelación, reintentos, aislamiento por usuario y protección de datos del pedido).
-- Código Java/Kotlin y recursos Android: compilados de forma independiente.
-- No se realizaron solicitudes de recuperación contra tu cuenta real ni se ejecutó la app en un emulador Android. Prueba el envío y las pantallas en tu Android Studio.
 
 ## Verificación realizada
 
