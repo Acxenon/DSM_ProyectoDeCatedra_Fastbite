@@ -1,4 +1,4 @@
-# FastBite — aplicación Android de pedidos
+# FastBite: aplicación Android de pedidos para comida
 
 Proyecto Kotlin con vistas nativas, Firebase Authentication y sincronización de pedidos en Cloud Firestore. Conserva la configuración de Firebase `fastbitefb` y el paquete `com.example.fastbite`.
 
