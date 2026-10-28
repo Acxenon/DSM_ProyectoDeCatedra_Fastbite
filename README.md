@@ -161,10 +161,6 @@ La validación previa del código incluyó recursos Android, compilación indepe
 
 Las reglas de Firestore aíslan los pedidos por usuario y limitan las actualizaciones de estado realizadas desde el cliente. Para convertir el proyecto en un servicio comercial se necesita un backend que valide precios, inventario, cobros y transiciones de estado, además de la integración con restaurantes y repartidores. Los importes enviados por la aplicación no equivalen a un cobro validado por servidor.
 
-## Créditos de fotografías
-
-Las fotografías de los productos son referenciales y proceden de Wikimedia Commons. Sus autores, fuentes y licencias están documentados en [`CREDITOS_FOTOGRAFIAS.md`](CREDITOS_FOTOGRAFIAS.md) y en `app/src/main/assets/photo_credits.txt`.
-
 ## Documentación de referencia
 
 - [Firebase Authentication para Android](https://firebase.google.com/docs/auth/android/manage-users)
