@@ -10,7 +10,7 @@ Emmanuel Zenon Lovo Chavarría - LC230428
 
 ## Video demostrativo
 
-**Enlace:** pendiente de agregar.
+**Enlace:** https://drive.google.com/file/d/1cibg9ynZJtASvT9wvp-tWrmEO7fgkWhS/view?usp=sharing
 
 ## Funcionalidades
 
