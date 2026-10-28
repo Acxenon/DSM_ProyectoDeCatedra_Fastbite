@@ -8,7 +8,7 @@ La interfaz está en español y utiliza precios en dólares estadounidenses. Los
 
 Emmanuel Zenon Lovo Chavarría - LC230428
 
-## Video demostrativo
+# Video demostrativo/explicativo
 
 **Enlace:** https://drive.google.com/file/d/1cibg9ynZJtASvT9wvp-tWrmEO7fgkWhS/view?usp=sharing
 
