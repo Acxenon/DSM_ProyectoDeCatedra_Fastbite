@@ -12,6 +12,10 @@ Emmanuel Zenon Lovo Chavarría - LC230428
 
 **Enlace:** https://drive.google.com/file/d/1cibg9ynZJtASvT9wvp-tWrmEO7fgkWhS/view?usp=sharing
 
+## Mockups/diseños de pantalla
+
+**Enlace:** https://www.figma.com/design/B1NNJZi9SA5H6fzNiWaTwp/FastBite?node-id=0-1&t=YRQS64Fd5JQ5CbDh-1
+
 ## Funcionalidades
 
 - **Cuenta:** registro con nombre, apellido, correo y contraseña; inicio y cierre de sesión; recuperación de contraseña por correo electrónico.
