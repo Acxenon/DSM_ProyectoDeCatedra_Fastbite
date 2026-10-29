@@ -2,7 +2,7 @@
 
 FastBite es una aplicación Android de pedidos de comida que permite explorar un catálogo, buscar productos, administrar un carrito y consultar el historial de pedidos desde una cuenta personal. Está desarrollada con Kotlin, vistas nativas en XML y Firebase.
 
-La interfaz está en español y utiliza precios en dólares estadounidenses. Los formularios de entrega están adaptados a números telefónicos de El Salvador (+503).
+La interfaz está en español y utiliza precios en dólares. Los formularios de entrega están adaptados a números telefónicos de El Salvador (+503).
 
 ## Integrantes
 
